@@ -1,0 +1,149 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Comm-Press Database</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+      <script type="text/template" class="templateDefaultCustomer">
+    <h1><%= title%></h1>
+    <div class="row voffset6">
+        <div class="col-md-4" id="qrcode-quality"></div>
+        <div class="col-md-8">
+        <h2>Quality</h2>
+        <p class="lead"><a href="<%=quality_url%>">Link</a></p>
+      </div>
+    </div>
+    <div class="row voffset6">
+        <div class="col-md-4" id="qrcode-staging"></div>
+        <div class="col-md-8">
+        <h2>Staging</h2>
+        <p class="lead"><a href="<%=staging_url%>">Link</a></p>
+      </div>
+    </div>
+        <div class="row voffset6">
+        <div class="col-md-4" id="qrcode-production"></div>
+        <div class="col-md-8">
+        <h2>Productions</h2>
+        <p class="lead"><a href="<%=production_url%>">Link</a></p>
+      </div>
+     </div>
+
+    </script>
+
+
+              <script type="text/template" class="templateCreateCustomer">
+     <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="shortname">Shortname:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="shortname" placeholder="Enter Shortname">
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="title">Title:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="title" placeholder="Enter Title">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="production_url">Production Url:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="production_url" placeholder="Enter Production Url">
+    </div>
+  </div>
+
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="quality_url">Quality Url:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="quality_url" placeholder="Enter Quality Url">
+    </div>
+  </div>
+
+      <div class="form-group">
+    <label class="control-label col-sm-2" for="staging_url">Staging Url:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="staging_url" placeholder="Enter Staging Url">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" id="createCustomer" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+   </script>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#customer/create">Add Customer</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    <div id="mainContent">
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="contrib/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="contrib/qrcodejs/qrcode.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="contrib/underscore.js"></script>
+    <script src="contrib/backbone.js"></script>
+    <script src="custom/Routing/Routing.js"></script>
+    <script src="custom/Model/Customer.js"></script>
+    <script src="custom/Collection/CustomerCollection.js"></script>
+    <script src="custom/Views/CustomerCollectionView.js"></script>
+    <script src="custom/Views/CustomerCreateView.js"></script>
+    <script src="custom/Views/CustomerView.js"></script>
+    <script src="custom/main.js"></script>
+  </body>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="s/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
