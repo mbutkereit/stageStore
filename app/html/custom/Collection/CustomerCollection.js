@@ -1,7 +1,7 @@
 
 window.cp.CustomerCollection = Backbone.Collection.extend({
 model: window.cp.CustomerModel,
-    url: 'http://localhost:8000/customer',
+    url: '/customer',
 
     initialize: function(){
         this.fetch({

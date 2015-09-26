@@ -1,0 +1,7 @@
+database:
+    driver: mysqli
+    host: DB
+    dbname: drupal
+    user: root
+    password: admin123
+    charset: utf8
